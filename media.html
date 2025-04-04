@@ -1,42 +1,110 @@
+<!-- media.html -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Media Page</title>
+    <title>About Me | Multimedia</title>
   </head>
   <body>
-    <h1>Media Page</h1>
-    <section>
-      <h1>Profile Picture</h1>
-      <picture>
-        <source media="(max-width: 768px)" srcset="image_mobile.jpg" />
-        <source media="(max-width: 992px)" srcset="image_tablet.jpg" />
-        <source media="(max-width: 1200px)" srcset="image_laptop.jpg" />
-        <img src="/Asset/Profile pic.avif" alt="My Profile Picture" />
-      </picture>
-    
-      <figure>
-        <figcaption>Profile Picture</figcaption>
-        <img src="/Asset/Profile picture.jpeg" alt="My Profile Picture" />
-      </figure>
-      <embed
-        type="application/pdf"
-        src="/Asset/file.pdf"
-        width="500"
-        height="375"
-      />
-      <br/> 
+    <header>
+      <h1>About Me</h1>
+      <p>A Powerful Multimedia Message</p>
+    </header>
 
+    <main>
+      <section>
+        <h2>Responsive Picture</h2>
+        <picture>
+          <source
+            media="(min-width: 1400px)"
+            srcset="asset/large-desktop.jpg"
+          />
+          <source media="(min-width: 1200px)" srcset="asset/desktop.jpeg" />
+          <source media="(min-width: 1024px)" srcset="asset/laptop.jpeg" />
+          <source media="(min-width: 768px)" srcset="asset/tablet.jpeg" />
+          <source media="(max-width: 767px)" srcset="asset/mobile.jpeg" />
+          <img
+            src="Asset/laptop.jpeg"
+            alt="A representation of me on various devices"
+          />
+        </picture>
+        <p>
+          This image adjusts based on your device screen — mobile, tablet,
+          laptop, or large desktop.
+        </p>
+      </section>
+
+      <section>
+        <h2>Audio Message</h2>
+        <audio controls>
+          <source
+            src="Asset/latin-baroque-morning-offering-prayer-opera-283031.mp3"
+            type="audio/mpeg"
+          />
+          <source src="Asset/acoustic-guitar.mp3" type="audio/ogg" />
+          Your browser does not support the audio element.
+        </audio>
+        <p>Hear my voice message expressing who I am and what drives me.</p>
+      </section>
+
+      <section>
+        <h2>Video Introduction</h2>
+        <video width="320" height="240" controls>
+          <source src="Asset/short video.mp4" type="video/mp4" />
+          <source src="Asset/Display.mp4" type="video/webm" />
+          Your browser does not support the video tag.
+        </video>
+        <p>A short video that shares my background and vision.</p>
+      </section>
+
+      <section>
+        <h2>Embedded External Media</h2>
+        <iframe width="320" height="240" src="https://www.youtube.com/embed/es8z2NxLQUU" allowfullscreen title="YouTube Video"></iframe>
+        <p>An embedded YouTube video for additional perspective about my journey.</p>
     </section>
-    <video width="320" height="240" controls>
-      <source src="/Asset/Display.mp4" type="video/mp4" />
-    </video>
-    <br/> 
 
-    
-    <audio controls>
-      <source src="/Asset/acoustic-guitar.mp3" type="audio/mp3" />
-    </audio>
+      <section>
+        <h2>Embedded External Media</h2>
+        <embed
+          type="application/pdf"
+          src="Asset/file.pdf"
+          width="600"
+          height="375"
+        />
+        <p>
+          An embedded pdf document for additional perspective about my journey.
+        </p>
+      </section>
+
+      <section>
+        <h2>Standard Image</h2>
+        <img
+          src="Asset/Hyper.jpeg"
+          alt="Professional Photo of Me"
+          width="300"
+        />
+        <p>
+          This is a professional image that represents me in the tech space.
+        </p>
+      </section>
+
+      <section>
+        <h2>SVG Graphic</h2>
+        <object
+          data="Asset/SVG.png"
+          type="image/svg+xml"
+          width="600"
+          height="600 "
+        >
+          Your browser does not support SVG images.
+        </object>
+        <p>This is a custom vector image representing my personal brand.</p>
+      </section>
+    </main>
+
+    <footer>
+      <p><a href="index.html">&larr; Back to Home</a></p>
+    </footer>
   </body>
 </html>
